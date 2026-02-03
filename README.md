@@ -29,7 +29,7 @@ cases</p>
 ## 🖼️ Visualization
 
 <div align="center">
-<img width="800" alt="image" src="assets/figvis.png">
+<img width="800" alt="image" src="asserts/figvis.png">
 <p>Qualitative results of DeepSight on the Bench2Drive closed-loop evaluation set.</p>
 </div>
 
