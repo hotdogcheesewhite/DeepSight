@@ -32,6 +32,7 @@ cases</p>
 <img width="800" alt="image" src="assets/figvis.png">
 <p>Qualitative results of DeepSight on the Bench2Drive closed-loop evaluation set.</p>
 </div>
+
 # DeepSight
 
 DeepSight is an autonomous driving perception and reasoning framework built on top of [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), with full-pipeline customization for data processing, model training, and inference evaluation in autonomous driving scenarios.
