@@ -1,0 +1,33 @@
+MASTER_PORT=$(python -c "import socket; s = socket.socket(socket.AF_INET, socket.SOCK_STREAM); s.bind(('', 0)); print(s.getsockname()[1]); s.close()")
+CUDA_VISIBLE_DEVICES=3 torchrun --master_port=$MASTER_PORT src/eval.py \
+                --deepspeed examples/deepspeed/ds_z0_config.json \
+                --stage sft \
+                --do_train \
+                --model_name_or_path /mnt/nas-data-1/wuchangjie.wcj/work/ad/bev_ex2_b4_e2/checkpoint-13000 \
+                --dataset bench2drive_bev_test \
+                --tokenized_path /mnt/nas-data-1/wuchangjie.wcj/data/ad/train_bev_bench2drive_test \
+                --output_dir debug/ex1_v2 \
+                --flash_attn fa2 \
+                --learning_rate 2e-5 \
+                --template qwen2_vl \
+                --finetuning_type full \
+                --freeze_vision_tower False \
+                --disable_gradient_checkpointing True \
+                --overwrite_cache \
+                --overwrite_output_dir \
+                --warmup_steps 100 \
+                --weight_decay 0.1 \
+                --preprocessing_num_workers 8 \
+                --preprocessing_batch_size 8 \
+                --per_device_train_batch_size 1 \
+                --ddp_timeout 900000000 \
+                --lr_scheduler_type cosine \
+                --logging_steps 1 \
+                --cutoff_len 10000 \
+                --save_steps 10 \
+                --save_total_limit 100 \
+                --plot_loss \
+                --num_train_epochs 10 \
+                --bf16 \
+                --save_only_model True \
+                --image_max_pixels 451584 \
