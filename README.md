@@ -125,7 +125,8 @@ Replace textprompt with desired prompts to generate data that needs Qwen-3VL ann
 **Script:** [bench2drive/dataprocess/jsonopenai.py](bench2drive/dataprocess/jsonopenai.py)
 
 Update the OpenAI API key and call the Qwen3VL model to perform annotation.
-
+<p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
+></a></p>
 ---
 
 ## 2. Model Training
@@ -147,7 +148,8 @@ The training entry point is `src/train.py`, with hyperparameters defined in YAML
 [src/llamafactory/data/ad_collator.py](src/llamafactory/data/ad_collator.py)
 
 Designs the training method.
-
+<p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
+></a></p>
 ---
 
 ## 3. Model Inference
@@ -169,7 +171,8 @@ vLLM uses an internal implementation of transformers that **does not include DIN
 
 - **Merge script:** [src/tools/merge_model_weight.py](src/tools/merge_model_weight.py)
 - Fixed target path: `/mnt/nas-data-1/wuchangjie.wcj/work/bev_ex3_v3_fulldata_resume/Qwen2.5-VL-3B-Instruct`
-
+<p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
+></a></p>
 ---
 
 ## 4. Closed-Loop Evaluation
@@ -315,7 +318,8 @@ A reference inference environment example: `deepsight/example.txt`
 **Script:** [bench2drive/leaderboard/scripts/run_evaluation_qwen.sh](bench2drive/leaderboard/scripts/run_evaluation_qwen.sh)
 
 Runs the Bench2Drive evaluation leaderboard pipeline with the trained Qwen model. Requires the separate inference environment installed in `bench2drive/`.
-
+<p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
+></a></p>
 ---
 
 ## Key Components
@@ -338,3 +342,11 @@ This project is distributed under the terms described in the [LICENSE](LICENSE) 
 - [ ] Release DeepSight reasoning code
 - [ ] Release whole DeepSight code
 - [ ] Release checkpoints
+<p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
+></a></p>
+
+## 🙏 Acknowledgement
+Our work is primarily based on the following codebases:[FSDrive](https://github.com/MIV-XJTU/FSDrive), [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), [MoVQGAN](https://github.com/ai-forever/MoVQGAN), [GPT-Driver](https://github.com/PointsCoder/GPT-Driver), [Agent-Driver](https://github.com/USC-GVL/Agent-Driver). We are sincerely grateful for their work.
+
+<p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
+></a></p>
